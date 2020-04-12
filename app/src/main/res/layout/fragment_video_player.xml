@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:res-auto="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/frameLayOutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.islamicapp.BetterVideoPlayer.BetterVideoPlayer
+                android:id="@+id/bvp"
+                res-auto:bvp_autoPlay="true"
+                res-auto:bvp_captionColor="@android:color/holo_blue_light"
+                res-auto:bvp_captionSize="20sp"
+                res-auto:bvp_showBottomProgressBar="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.example.islamicapp.CustomView.SKtextViewRobotoRegular
+                android:id="@+id/mNoStreamUrl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/striming_url_not_specified"
+                android:textColor="@color/white_color"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewResize"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+                <ImageView
+                    android:id="@+id/fullScreenView"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/programListCOntainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCurrentProgramList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.example.islamicapp.CustomView.SKtextViewRobotoRegular
+                android:id="@+id/mNoSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/striming_url_not_specified"
+                android:textColor="@color/white_color"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

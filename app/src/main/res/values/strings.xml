@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">IslamicApp</string>
+
+<!--    Better video player START-->
+    <string name="bvp_right">RIGHT</string>
+    <string name="bvp_left">LEFT</string>
+    <string name="volume">Volume: %1$d</string>
+    <string name="brightness">Brightness: %1$d</string>
+    <string name="home">Home</string>
+    <string name="schedule">Schedule</string>
+    <string name="about">About</string>
+    <string name="title">Title</string>
+    <string name="striming_url_not_specified">Striming URL not specified</string>
+    <string name="content">Content</string>
+    <!--    Better video player END-->
+</resources>
