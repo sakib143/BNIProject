@@ -229,6 +229,7 @@ public class VideoPlayerFragment extends Fragment implements BetterVideoCallback
         this.bvp = (BetterVideoPlayer) this.mRootView.findViewById(R.id.bvp);
         this.bvp.setCallback(this);
         if (!AppController.VIDEO_STREAMING_URL.equals("")) {
+            Log.e("=>"," url " + AppController.VIDEO_STREAMING_URL);
             System.out.println(">>>>>>>>" + AppController.VIDEO_STREAMING_URL);
             this.bvp.setSource(Uri.parse(AppController.VIDEO_STREAMING_URL));
             this.mNoStreamUrl.setVisibility(8);
@@ -236,6 +237,8 @@ public class VideoPlayerFragment extends Fragment implements BetterVideoCallback
         }
         this.mNoStreamUrl.setVisibility(0);
     }
+
+
 
     /* access modifiers changed from: private */
     public void setValuesToAdapter() {
